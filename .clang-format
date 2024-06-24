@@ -1,79 +1,79 @@
 BasedOnStyle: LLVM
+Language: Cpp
 
 ###################################
 #          indent conf
 ###################################
-UseTab: Never
-IndentWidth: 4
-TabWidth: 4
-ColumnLimit: 0
-AccessModifierOffset: -4
-NamespaceIndentation: All
-BreakBeforeBraces: Custom
+UseTab: Never                                     # 不使用制表符
+IndentWidth: 4                                    # 缩进宽度为 4 个空格
+TabWidth: 4                                       # Tab 键宽度为 4 个空格
+ColumnLimit: 0                                    # 不限制每行字符数
+AccessModifierOffset: -4                          # 访问修饰符的偏移量为 -4 个空格
+NamespaceIndentation: All                         # 命名空间缩进方式为全部缩进
+BreakBeforeBraces: Custom                         # 自定义换行规则
 
 ###################################
 #          other styles
 ###################################
 
-AllowShortIfStatementsOnASingleLine: Always
-AllowShortLoopsOnASingleLine: true
-AllowShortBlocksOnASingleLine: Always
-IndentCaseLabels: true
-AlignConsecutiveAssignments: None
+AllowShortIfStatementsOnASingleLine: Always       # 允许短的 if 语句放在一行。
+AllowShortLoopsOnASingleLine: true                # 允许短的循环语句放在一行。
+AllowShortBlocksOnASingleLine: Always             # 允许短的代码块放在一行。
+IndentCaseLabels: true                            # 对case标签进行缩进
+AlignConsecutiveAssignments: None                 # 不对连续的赋值语句进行对齐
 
+AlignAfterOpenBracket: Align                      # 在开括号后对齐。
+AlignOperands: Align                              # 操作数对齐。
+AllowAllArgumentsOnNextLine: false                # 不允许将所有参数放在下一行。
+AllowAllConstructorInitializersOnNextLine: false  # 不允许将所有构造函数初始化器放在下一行。
+AllowAllParametersOfDeclarationOnNextLine: false  # 不允许将所有声明的参数放在下一行。
+AllowShortCaseLabelsOnASingleLine: false          # 不允许短的 case 标签放在一行。
+AllowShortFunctionsOnASingleLine: All             # 允许所有短的函数放在一行。
+AllowShortLambdasOnASingleLine: All               # 允许所有短的 lambda 表达式放在一行。
+AlwaysBreakAfterReturnType: None                  # 返回类型后不强制换行。
+AlwaysBreakTemplateDeclarations: Yes              # 模板声明后强制换行。
 
-AlignAfterOpenBracket: Align
-AlignOperands: Align
-AllowAllArgumentsOnNextLine: false
-AllowAllConstructorInitializersOnNextLine: false
-AllowAllParametersOfDeclarationOnNextLine: false
-AllowShortCaseLabelsOnASingleLine: false
-AllowShortFunctionsOnASingleLine: All
-AllowShortLambdasOnASingleLine: All
-AlwaysBreakAfterReturnType: None
-AlwaysBreakTemplateDeclarations: Yes
+BraceWrapping:                                    # 大括号换行
+  AfterCaseLabel: false                           # case 标签后不换行。
+  AfterClass: false                               # 类定义后不换行。
+  AfterControlStatement: Never                    # 控制语句后不换行。
+  AfterEnum: false                                # 枚举定义后不换行。
+  AfterFunction: true                             # 函数定义后换行。
+  AfterNamespace: false                           # 命名空间定义后不换行。
+  AfterUnion: false                               # 联合定义后不换行。
+  BeforeCatch: false                              # catch 前不换行。
+  BeforeElse: false                               # else 前不换行。
+  IndentBraces: false                             # 大括号不缩进。
+  SplitEmptyFunction: false                       # 空函数不拆分。
+  SplitEmptyRecord: true                          # 空记录拆分。
 
-BraceWrapping:
-  AfterCaseLabel: false
-  AfterClass: false
-  AfterControlStatement: Never
-  AfterEnum: false
-  AfterFunction: true
-  AfterNamespace: false
-  AfterUnion: false
-  BeforeCatch: false
-  BeforeElse: false
-  IndentBraces: false
-  SplitEmptyFunction: false
-  SplitEmptyRecord: true
+BreakBeforeBinaryOperators: None                  # 二元操作符前不换行。
+BreakBeforeTernaryOperators: true                 # 三元操作符前换行。
+BreakConstructorInitializers: BeforeColon         # 构造函数初始化器在冒号前换行。
+BreakInheritanceList: BeforeColon                 # 继承列表在冒号前换行。
 
-BreakBeforeBinaryOperators: None
-BreakBeforeTernaryOperators: true
-BreakConstructorInitializers: BeforeColon
-BreakInheritanceList: BeforeColon
-
-CompactNamespaces: false
-ContinuationIndentWidth: 8
-IndentPPDirectives: None
-KeepEmptyLinesAtTheStartOfBlocks: true
-MaxEmptyLinesToKeep: 2
-ObjCSpaceAfterProperty: false
-ObjCSpaceBeforeProtocolList: true
-PointerAlignment: Right
-ReflowComments: false
-SpaceAfterCStyleCast: true
-SpaceAfterLogicalNot: false
-SpaceAfterTemplateKeyword: false
-SpaceBeforeAssignmentOperators: true
-SpaceBeforeCpp11BracedList: false
-SpaceBeforeCtorInitializerColon: true
-SpaceBeforeInheritanceColon: true
-SpaceBeforeParens: ControlStatements
-SpaceBeforeRangeBasedForLoopColon: false
-SpaceInEmptyParentheses: false
-SpacesBeforeTrailingComments: 0
-SpacesInAngles: false
-SpacesInCStyleCastParentheses: false
-SpacesInContainerLiterals: false
-SpacesInParentheses: false
-SpacesInSquareBrackets: false
+CompactNamespaces: false                          # 命名空间不紧凑。
+ContinuationIndentWidth: 8                        # 续行缩进宽度为 8 个空格。
+IndentPPDirectives: None                          # 预处理指令不缩进。
+KeepEmptyLinesAtTheStartOfBlocks: true            # 保留块开始处的空行。
+MaxEmptyLinesToKeep: 2                            # 最多保留 2 个空行。
+ObjCSpaceAfterProperty: false                     # Objective-C 属性后不加空格。
+ObjCSpaceBeforeProtocolList: true                 # Objective-C 协议列表前加空格。
+PointerAlignment: Right                           # 指针对齐方式为右对齐。
+ReflowComments: false                             # 不重排注释。
+SpaceAfterCStyleCast: true                        # C 风格类型转换后加空格。
+SpaceAfterLogicalNot: false                       # 逻辑非操作符后不加空格。
+SpaceAfterTemplateKeyword: false                  # 模板关键字后不加空格。
+SpaceBeforeAssignmentOperators: true              # 赋值操作符前加空格。
+SpaceBeforeCpp11BracedList: false                 # C++11 花括号列表前不加空格。
+SpaceBeforeCtorInitializerColon: true             # 构造函数初始化器冒号前加空格。
+SpaceBeforeInheritanceColon: true                 # 继承冒号前加空格。
+SpaceBeforeParens: ControlStatements              # 控制语句括号前加空格。
+SpaceBeforeRangeBasedForLoopColon: false          # 基于范围的 for 循环冒号前不加空格。
+SpaceInEmptyParentheses: false                    # 空括号内不加空格。
+SpacesBeforeTrailingComments: 0                   # 尾随注释前不加空格。
+SpacesInAngles: false                             # 尖括号内不加空格。
+SpacesInCStyleCastParentheses: false              # C 风格类型转换括号内不加空格。
+SpacesInContainerLiterals: false                  # 容器字面量内不加空格。
+SpacesInParentheses: false                        # 括号内不加空格。
+SpacesInSquareBrackets: false                     # 方括号内不加空格。
