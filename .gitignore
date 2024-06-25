@@ -1,9 +1,11 @@
 .idea/*
 cmake-build-debug/*
 
-apps/draft/*
 Doc/draft/*
-ThirdPart/fatfs/*
+#apps/draft/*
+#ThirdPart/fatfs/*
+ThirdPart/fatfs/ff15/documents/*
 ThirdPart/hilink/*
-ThirdPart/lua/*
+#ThirdPart/lua/*
+ThirdPart/lua/doc/*
 ThirdPart/microPython/*
