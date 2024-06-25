@@ -1,2 +1,9 @@
 .idea/*
+cmake-build-debug/*
+
+apps/draft/*
+Doc/draft/*
+ThirdPart/fatfs/*
+ThirdPart/hilink/*
 ThirdPart/lua/*
+ThirdPart/microPython/*
