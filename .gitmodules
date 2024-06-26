@@ -1,0 +1,21 @@
+[submodule "ThirdPart/CmBacktrace/raw"]
+	path = ThirdPart/CmBacktrace/raw
+	url = https://github.com/armink/CmBacktrace.git
+[submodule "ThirdPart/PLOOC/raw"]
+	path = ThirdPart/PLOOC/raw
+	url = https://github.com/GorgonMeducer/PLOOC.git
+[submodule "ThirdPart/lvgl/raw/lvgl"]
+	path = ThirdPart/lvgl/raw/lvgl
+	url = https://github.com/lvgl/lvgl.git
+[submodule "ThirdPart/lua/raw"]
+	path = ThirdPart/lua/raw
+	url = https://github.com/lua/lua.git
+[submodule "ThirdPart/GuiLite/raw"]
+	path = ThirdPart/GuiLite/raw
+	url = https://github.com/idea4good/GuiLite.git
+[submodule "ThirdPart/LittleFS/raw"]
+	path = ThirdPart/LittleFS/raw
+	url = https://github.com/littlefs-project/littlefs.git
+[submodule "ThirdPart/SGL/raw"]
+	path = ThirdPart/SGL/raw
+	url = https://gitee.com/li-shan-asked/sgl.git

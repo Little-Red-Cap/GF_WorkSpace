@@ -337,11 +337,11 @@ int main(void) {
         HAL_GPIO_TogglePin(led_inline_GPIO_Port, led_inline_Pin);
         HAL_Delay(500);
     }
-    taskSchedInit();    // 初始化调度锁
-    tTaskDelayListInit(); // 初始化延时任务链表
+    taskSchedInit();
+    tTaskDelayListInit();
 
 #if OS_ENABLE_TIMER
-    tTimerModuleInit();  // 初始化定时器模块
+    tTimerModuleInit();
     tTimeTickInit();
 #endif
 #if OS_ENABLE_CPU_USAGE
@@ -351,13 +351,12 @@ int main(void) {
     initTaskStack(&idle_tcb, idleTaskEntry, idle_stack, STACK_SIZE, OS_PRIORITY_BITMAP_SIZE - 1);
     idleTask = &idle_tcb;
 
-    // 设置初始任务
     nextTask = taskHigherPrioReady();
 
     __set_PSP(0);                        // 启动第一个任务，使用PSP，进入线程模式
-//    SCB->SHPR[10] = 0xFF;                // 最高优先级
-    SCB->SHP[10] = 0xFF;                // 最高优先级
-    SCB->ICSR |= SCB_ICSR_PENDSVSET_Msk; // 触发PendSV中断
+//    SCB->SHPR[10] = 0xFF;                     // 最高优先级
+    SCB->SHP[10] = 0xFF;                    // 最高优先级
+    SCB->ICSR |= SCB_ICSR_PENDSVSET_Msk;    // 触发PendSV中断
     return 0;
 }
 #endif
