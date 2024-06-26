@@ -8,7 +8,7 @@
 void SystemClock_Config();
 void MX_GPIO_Init();
 
-__attribute__((__noreturn__)) __attribute__((used))
+//__attribute__((__noreturn__)) __attribute__((used))
 void main_application()
 {
     HAL_Init();
@@ -20,7 +20,7 @@ void main_application()
 //    HAL_I2C_DeInit(&hi2c2);
 //    MX_ADC1_Init();
 //    HAL_ADCEx_Calibration_Start(&hadc1);
-    for (;;) {
+    for (;0;) {
         HAL_GPIO_TogglePin(led_inline_GPIO_Port, led_inline_Pin);
         HAL_Delay(100);
     }

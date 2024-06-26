@@ -67,7 +67,7 @@ void SystemClock_Config(void);
   * @brief  The application entry point.
   * @retval int
   */
-int main(void)
+int main1(void)
 {
   /* USER CODE BEGIN 1 */
 
