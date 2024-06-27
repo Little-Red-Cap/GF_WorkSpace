@@ -1,4 +1,49 @@
-### Third-party libraries
+## How to Clone
+
+This repository contains other, necessary GF_WorkSpace software repositories as
+[git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). Those
+submodules are not pulled in with the normal git clone command and they will be
+needed. There are a couple of techniques to pull in the submodules.
+
+### Everything at Once
+
+This command will clone the this repository and all submodules
+in a single step.
+
+```
+git clone --recurse-submodules https://github.com/Little-Red-Cap/GF_WorkSpace.git
+```
+
+### Main Repository First, Submodules Second
+
+If you've already cloned the main repository you can pull in the submodules
+with a second command. Both commands are shown below.
+
+```
+git clone https://github.com/Little-Red-Cap/GF_WorkSpace.git
+cd GF_WorkSpace
+git submodule update --init --recursive
+```
+
+### Keeping Your Clone Up-To-Date
+
+If you have cloned this repository and would like to pull in the latest
+changes, you will have to do this in two steps. The first step will pull in
+updates to the main repo, including updated _references_ to the submodules. The
+second step will update the code in the submodules to match those references.
+The two commands needed to accomplish this are shown below, run these commands
+from inside the main repository's directory (top level `GF_WorkSpace`
+directory works fine).
+
+```
+git pull
+git submodule update --init --recursive
+```
+
+If you have chosen to fork this repository then updating the fork from upstream
+will require a different, more involved procedure.
+
+## Third-party libraries
 
 | Library               | Address                                                       | License    | Link                                               |
 |-----------------------|---------------------------------------------------------------|------------|----------------------------------------------------|
