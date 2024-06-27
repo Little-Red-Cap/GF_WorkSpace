@@ -5,13 +5,11 @@
 | FATFS                 | --                                                            | --         | http://elm-chan.org/fsw/ff/00index_e.html          |
 | MicroPython           | --                                                            | --         |                                                    |
 | QRCode                | --                                                            | --         |                                                    |
-| FreeType              | ThirdParty/FreeType/raw                                       | FreeType   | https://freetype.org/                              |
-| SGL                   | --                                                            | --         |                                                    |
-| CmBackTrace           | --                                                            | --         | https://github.com/armink/CmBacktrace              |
+| FreeType              | ThirdParty/FreeType/raw                                       |            | https://freetype.org/                              |
+| SGL                   | ThirdParty/SGL/raw                                            | --         |                                                    |
+| CmBackTrace           | ThirdParty/CmBackTrace/raw                                    | --         | https://github.com/armink/CmBacktrace              |
 | Hi-Link FPM383C-80x64 | --                                                            | --         |                                                    |
-| CMSIS                 | source/utilities/compiler/arm/3rd-party/CMSIS                 | Apache 2.0 | https://github.com/ARM-software/CMSIS_5            |
 | setjmp                | source/hal/arch/x86/win                                       | BSD        |                                                    |
-| littlefs              | source/component/3rd-party/littlefs/raw                       | BSD        | https://github.com/littlefs-project/littlefs       |
 | PLOOC                 | ThirdParty/PLOOC/raw                                          | Apache 2.0 | https://github.com/GorgonMeducer/PLOOC             |
 | btstack               | source/component/3rd-party/btstack/raw                        | Other      | https://github.com/bluekitchen/btstack             |
 | coremark              | source/component/3rd-party/coremark/raw                       | Apache     | https://github.com/eembc/coremark                  |
@@ -27,14 +25,14 @@
 | lvgl                  | ThirdParty/lvgl/raw/lvgl                                      | MIT        | https://lvgl.io/                                   |
 | lv_lib_freetype       | source/component/3rd-party/lvgl/extension/lv_lib_freetype/raw | MIT        | https://lvgl.io/                                   |
 | CMSIS                 | source/utilities/compiler/arm/3rd-party/CMSIS                 | Apache 2.0 | https://github.com/ARM-software/CMSIS_5            |
+| GuiLite               | ThirdParty/GuiLite/raw                                        | Apache 2.0 | https://github.com/idea4good/GuiLite               |
+| LittleFS              | ThirdParty/littlefs/raw                                       | BSD        | https://github.com/littlefs-project/littlefs       |
 | evm                   | source/component/3rd-party/evm/raw                            | Apache 2.0 | https://github.com/scriptiot/evm                   |
 | LingLongGUI           | source/component/3rd-party/LingLongGUI/raw                    | Apache 2.0 | https://gitee.com/gzbkey/LingLongGUI               |
 | mbedtls               | source/component/3rd-party/mbedtls/raw                        | Apache 2.0 | https://tls.mbed.org/                              |
-| GuiLite               | ThirdParty/GuiLite/raw                                        | Apache 2.0 | https://github.com/idea4good/GuiLite               |
 | Segger_RTT            | source/component/3rd-party/segger/raw/RTT                     | segger     | https://wiki.segger.com/RTT                        |
 | Segger_SystemView     | source/component/3rd-party/segger/raw/SystemView              | segger     | https://wiki.segger.com/SystemView                 |
 | nuconsole             | source/component/3rd-party/nuconsole/raw                      | nuvoton    | https://www.nuvoton.com.cn/                        |
-| LittleFS              | ThirdParty/littlefs/raw                                       | BSD        | https://github.com/littlefs-project/littlefs       |
 | getopt_long           | source/shell/sys/linux/lib/3rd-party/getopt                   | OpenBSD    | https://github.com/openbsd/src                     |
 | regex                 | source/shell/sys/linux/lib/3rd-party/regex                    | OpenBSD    | https://github.com/openbsd/src                     |
 | fnmatch               | source/shell/sys/linux/lib/3rd-party/fnmatch                  | BSD        | http://www.jbox.dk/sanos/source/lib/fnmatch.c.html |
