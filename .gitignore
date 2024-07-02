@@ -1,8 +1,10 @@
 .idea/*
-cmake-build-debug/*
+#cmake-build-debug/*
+cmake-build-*/*
 
 Doc/draft/*
 #apps/draft/*
+Modules/ThirdPart/lv_port_pc_visual_studio/*
 #ThirdPart/fatfs/*
 ThirdPart/fatfs/ff15/documents/*
 ThirdPart/hilink/*

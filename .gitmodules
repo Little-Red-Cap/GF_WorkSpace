@@ -19,3 +19,6 @@
 [submodule "ThirdPart/SGL/raw"]
 	path = ThirdPart/SGL/raw
 	url = https://gitee.com/li-shan-asked/sgl.git
+[submodule "ThirdPart/lvgl/raw/freetype"]
+	path = ThirdPart/lvgl/raw/freetype
+	url = https://github.com/freetype/freetype.git
