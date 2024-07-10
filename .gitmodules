@@ -22,3 +22,27 @@
 [submodule "ThirdPart/lvgl/raw/freetype"]
 	path = ThirdPart/lvgl/raw/freetype
 	url = https://github.com/freetype/freetype.git
+[submodule "ThirdPart/lw_oopc/raw"]
+	path = ThirdPart/lw_oopc/raw
+	url = https://github.com/Akagi201/lw_oopc.git
+[submodule "ThirdPart/cJSON/raw"]
+	path = ThirdPart/cJSON/raw
+	url = https://github.com/DaveGamble/cJSON.git
+[submodule "ThirdPart/lwrb/raw"]
+	path = ThirdPart/lwrb/raw
+	url = https://github.com/MaJerle/lwrb.git
+[submodule "ThirdPart/EasyFlash/raw"]
+	path = ThirdPart/EasyFlash/raw
+	url = https://github.com/armink/EasyFlash.git
+[submodule "ThirdPart/SFUD/raw"]
+	path = ThirdPart/SFUD/raw
+	url = https://github.com/armink/SFUD.git
+[submodule "ThirdPart/inih/raw"]
+	path = ThirdPart/inih/raw
+	url = https://github.com/benhoyt/inih.git
+[submodule "ThirdPart/MonoGUI/raw"]
+	path = ThirdPart/MonoGUI/raw
+	url = https://github.com/19greg96/MonoGUI.git
+[submodule "ThirdPart/cpost/raw"]
+	path = ThirdPart/cpost/raw
+	url = https://github.com/NevermindZZT/cpost.git
