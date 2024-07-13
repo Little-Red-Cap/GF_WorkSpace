@@ -11,3 +11,4 @@ ThirdPart/hilink/*
 #ThirdPart/lua/*
 ThirdPart/lua/doc/*
 ThirdPart/microPython/*
+/Modules/ThirdPart/lv_port_pc_visual_studio
