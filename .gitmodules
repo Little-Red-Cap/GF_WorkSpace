@@ -46,3 +46,57 @@
 [submodule "ThirdPart/cpost/raw"]
 	path = ThirdPart/cpost/raw
 	url = https://github.com/NevermindZZT/cpost.git
+[submodule "ThirdPart/ThreadX/threadx/raw"]
+	path = ThirdPart/ThreadX/threadx/raw
+	url = https://github.com/eclipse-threadx/threadx.git
+[submodule "ThirdPart/ThreadX/filex/raw"]
+	path = ThirdPart/ThreadX/filex/raw
+	url = https://github.com/eclipse-threadx/filex.git
+[submodule "ThirdPart/ThreadX/usbx/raw"]
+	path = ThirdPart/ThreadX/usbx/raw
+	url = https://github.com/eclipse-threadx/usbx.git
+[submodule "ThirdPart/ThreadX/netxduo/raw"]
+	path = ThirdPart/ThreadX/netxduo/raw
+	url = https://github.com/eclipse-threadx/netxduo.git
+[submodule "ThirdPart/ThreadX/levelx/raw"]
+	path = ThirdPart/ThreadX/levelx/raw
+	url = https://github.com/eclipse-threadx/levelx.git
+[submodule "ThirdPart/ThreadX/guix/raw"]
+	path = ThirdPart/ThreadX/guix/raw
+	url = https://github.com/eclipse-threadx/guix.git
+[submodule "ThirdPart/CMSIS-FreeRTOS/raw"]
+	path = ThirdPart/CMSIS-FreeRTOS/raw
+	url = https://github.com/ARM-software/CMSIS-FreeRTOS.git
+[submodule "ThirdPart/CMSIS/raw"]
+	path = ThirdPart/CMSIS/raw
+	url = https://github.com/ARM-software/CMSIS_6.git
+[submodule "ThirdPart/CMSIS-DSP/raw"]
+	path = ThirdPart/CMSIS-DSP/raw
+	url = https://github.com/ARM-software/CMSIS-DSP.git
+[submodule "ThirdPart/CMSIS-RTX/raw"]
+	path = ThirdPart/CMSIS-RTX/raw
+	url = https://github.com/ARM-software/CMSIS-RTX.git
+[submodule "ThirdPart/busybox/raw"]
+	path = ThirdPart/busybox/raw
+	url = https://github.com/mirror/busybox.git
+[submodule "ThirdPart/CMSIS-NN/raw"]
+	path = ThirdPart/CMSIS-NN/raw
+	url = https://github.com/ARM-software/CMSIS-NN.git
+[submodule "ThirdPart/CMSIS-Driver/raw"]
+	path = ThirdPart/CMSIS-Driver/raw
+	url = https://github.com/ARM-software/CMSIS-Driver.git
+[submodule "ThirdPart/busybox-w32/raw"]
+	path = ThirdPart/busybox-w32/raw
+	url = https://github.com/rmyorston/busybox-w32.git
+[submodule "ThirdPart/other/STM32-Bootloader/raw"]
+	path = ThirdPart/other/STM32-Bootloader/raw
+	url = https://github.com/viktorvano/STM32-Bootloader.git
+[submodule "ThirdPart/other/can_uds_bootloader/raw"]
+	path = ThirdPart/other/can_uds_bootloader/raw
+	url = https://gitee.com/toomoss/can_uds_bootloader.git
+[submodule "ThirdPart/other/eepromfs/raw"]
+	path = ThirdPart/other/eepromfs/raw
+	url = https://gitee.com/wtau_zaozao/eepromfs.git
+[submodule "ThirdPart/dynamic_loader/raw"]
+	path = ThirdPart/dynamic_loader/raw
+	url = https://gitee.com/wzh1845462801/dynamic_loader.git
