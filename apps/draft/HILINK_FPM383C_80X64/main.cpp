@@ -9,19 +9,19 @@
 static std::string adjustComPort(const std::string &comPort)
 {
     if (comPort.size() >= 4 && comPort.substr(0, 3) == "COM") {
-        std::string portNumberStr = comPort.substr(3); // ÌáÈ¡ "COM" ºóÃæµÄ²¿·Ö
+        std::string portNumberStr = comPort.substr(3); // æå– "COM" åé¢çš„éƒ¨åˆ†
         try {
-            int portNumber = std::stoi(portNumberStr); // ½«×Ö·û´®×ª»»ÎªÕûÊı
+            int portNumber = std::stoi(portNumberStr); // å°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºæ•´æ•°
             if (portNumber > 9) {
-                // µ±´®¿ÚºÅ´óÓÚ 9 Ê±£¬Ê¹ÓÃÌØÊâÂ·¾¶¸ñÊ½ "\\.\COMxx"
+                // å½“ä¸²å£å·å¤§äº 9 æ—¶ï¼Œä½¿ç”¨ç‰¹æ®Šè·¯å¾„æ ¼å¼ "\\.\COMxx"
 //                return "\\\\.\\" + comPort;
                 return R"(\\.\)" + comPort;
             }
         } catch (const std::invalid_argument &e) {
-            // ²»ÊÇÒ»¸öÓĞĞ§µÄÊı×Ö£¬¿ÉÒÔÑ¡Ôñ´¦ÀíÒì³£»òÕßÖ±½Ó·µ»ØÔ­Ê¼´®¿ÚºÅ
+            // ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ•°å­—ï¼Œå¯ä»¥é€‰æ‹©å¤„ç†å¼‚å¸¸æˆ–è€…ç›´æ¥è¿”å›åŸå§‹ä¸²å£å·
         }
     }
-    // ·ñÔòÖ±½Ó·µ»ØÔ­Ê¼´®¿ÚºÅ
+    // å¦åˆ™ç›´æ¥è¿”å›åŸå§‹ä¸²å£å·
     return comPort;
 }
 
@@ -31,7 +31,7 @@ int serial_init(HANDLE &serial_port, std::string com_port, DWORD baud_rate)
     COMMTIMEOUTS timeouts = {0};
     DCB dcbSerialParams = {0};
 
-    com_port = adjustComPort(com_port); // µ÷Õû´®¿ÚºÅ¸ñÊ½£¬µ±´®¿ÚºÅ´óÓÚ 9 Ê±£¬Ê¹ÓÃÌØÊâÂ·¾¶¸ñÊ½ "\\.\COMxx"
+    com_port = adjustComPort(com_port); // è°ƒæ•´ä¸²å£å·æ ¼å¼ï¼Œå½“ä¸²å£å·å¤§äº 9 æ—¶ï¼Œä½¿ç”¨ç‰¹æ®Šè·¯å¾„æ ¼å¼ "\\.\COMxx"
 
     serial_port = CreateFile(com_port.c_str(), GENERIC_READ | GENERIC_WRITE, 0, nullptr,
                              OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
@@ -89,16 +89,16 @@ void setLed(void);
 #endif
 
 /*
- * º£Áè¿Æ¼¼Ö¸ÎÆÊ¶±ğÄ£¿é´®¿ÚÍ¨ĞÅÊ¾Àı³ÌĞò
- * ÒÆÖ²ÓÚ Windows Æ½Ì¨
- * ×¢ÒâÊÂÏî£º
- *      1. ÔÚfingerprint_device.cÖĞ£¬¶Ô½ÓÎªµ±Ç°Æ½Ì¨µÄ´®¿Ú½ÓÊÕ¡¢·¢ËÍº¯Êı
- *      2. ÔÚdemo.cÖĞ£¬¶Ô½ÓÑÓÊ±º¯Êı void Delay_ms(U32Bit delaytime)
- *      3. ÔÚfingerprint_action.cÖĞ£¬¶Ô½Óº¯Êıvoid ASSERT_BUFFER(void)ÊµÏÖ¶ÏÑÔ£¬ÓÃÓÚ¼ì²é»º³åÇøÊÇ·ñÎª¿Õ£¬²¢clear sent and recv buffer
- *      4. ·Ç³£ÖØÒª£º
- *           (1)ÔÚfingerprint_protocol.hÖĞ£¬È·±£ºê¶¨Òå __packed ±»¶¨ÒåÎªÒ»×Ö½Ú¶ÔÆëÊôĞÔ
- *           (2)ÔÚµ±Ç°Æ½Ì¨ÉÏ£¬Ê¹ÓÃ #define __packed __attribute__((packed))
- *           (3)½«Ô­À´µÄ typedef __packed struct xxx ĞŞ¸ÄÎª typedef struct __packed xxx
+ * æµ·å‡Œç§‘æŠ€æŒ‡çº¹è¯†åˆ«æ¨¡å—ä¸²å£é€šä¿¡ç¤ºä¾‹ç¨‹åº
+ * ç§»æ¤äº Windows å¹³å°
+ * æ³¨æ„äº‹é¡¹ï¼š
+ *      1. åœ¨fingerprint_device.cä¸­ï¼Œå¯¹æ¥ä¸ºå½“å‰å¹³å°çš„ä¸²å£æ¥æ”¶ã€å‘é€å‡½æ•°
+ *      2. åœ¨demo.cä¸­ï¼Œå¯¹æ¥å»¶æ—¶å‡½æ•° void Delay_ms(U32Bit delaytime)
+ *      3. åœ¨fingerprint_action.cä¸­ï¼Œå¯¹æ¥å‡½æ•°void ASSERT_BUFFER(void)å®ç°æ–­è¨€ï¼Œç”¨äºæ£€æŸ¥ç¼“å†²åŒºæ˜¯å¦ä¸ºç©ºï¼Œå¹¶clear sent and recv buffer
+ *      4. éå¸¸é‡è¦ï¼š
+ *           (1)åœ¨fingerprint_protocol.hä¸­ï¼Œç¡®ä¿å®å®šä¹‰ __packed è¢«å®šä¹‰ä¸ºä¸€å­—èŠ‚å¯¹é½å±æ€§
+ *           (2)åœ¨å½“å‰å¹³å°ä¸Šï¼Œä½¿ç”¨ #define __packed __attribute__((packed))
+ *           (3)å°†åŸæ¥çš„ typedef __packed struct xxx ä¿®æ”¹ä¸º typedef struct __packed xxx
  *
  *  #define __packed __attribute__((packed))
  * */
@@ -116,7 +116,7 @@ int main()
 //    }
 //    Sleep(200);
 //    {
-//        // 5.34. »ñÈ¡Ö¸ÎÆÄ£¿é ID
+//        // 5.34. è·å–æŒ‡çº¹æ¨¡å— ID
 //        uint8_t data[] = {0xF1, 0x1F, 0xE2, 0x2E, 0xB6, 0x6B, 0xA8, 0x8A, 0x00, 0x07, 0x86, 0x00, 0x00, 0x00, 0x00, 0x03, 0x01, 0xFC };
 //        WriteFile(serialPort, data, sizeof(data), &bytesTransferred, nullptr);
 //    }
@@ -127,7 +127,7 @@ int main()
 //    }
 //    Sleep(200);
 //    {
-//        // 5.32. »ñÈ¡ÏµÍ³²ßÂÔ
+//        // 5.32. è·å–ç³»ç»Ÿç­–ç•¥
 //        uint8_t data[] = {0xF1, 0x1F, 0xE2, 0x2E, 0xB6, 0x6B, 0xA8, 0x8A, 0x00, 0x07, 0x86, 0x00, 0x00, 0x00, 0x00, 0x02, 0xFB, 0x03 };
 //        WriteFile(serialPort, data, sizeof(data), &bytesTransferred, nullptr);
 //    }
@@ -154,19 +154,19 @@ int main()
 std::string adjustComPort(const std::string &comPort)
 {
     if (comPort.size() >= 4 && comPort.substr(0, 3) == "COM") {
-        std::string portNumberStr = comPort.substr(3); // ÌáÈ¡ "COM" ºóÃæµÄ²¿·Ö
+        std::string portNumberStr = comPort.substr(3); // æå– "COM" åé¢çš„éƒ¨åˆ†
         try {
-            int portNumber = std::stoi(portNumberStr); // ½«×Ö·û´®×ª»»ÎªÕûÊı
+            int portNumber = std::stoi(portNumberStr); // å°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºæ•´æ•°
             if (portNumber > 9) {
-                // µ±´®¿ÚºÅ´óÓÚ 9 Ê±£¬Ê¹ÓÃÌØÊâÂ·¾¶¸ñÊ½ "\\.\COMxx"
+                // å½“ä¸²å£å·å¤§äº 9 æ—¶ï¼Œä½¿ç”¨ç‰¹æ®Šè·¯å¾„æ ¼å¼ "\\.\COMxx"
 //                return "\\\\.\\" + comPort;
                 return R"(\\.\)" + comPort;
             }
         } catch (const std::invalid_argument &e) {
-            // ²»ÊÇÒ»¸öÓĞĞ§µÄÊı×Ö£¬¿ÉÒÔÑ¡Ôñ´¦ÀíÒì³£»òÕßÖ±½Ó·µ»ØÔ­Ê¼´®¿ÚºÅ
+            // ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ•°å­—ï¼Œå¯ä»¥é€‰æ‹©å¤„ç†å¼‚å¸¸æˆ–è€…ç›´æ¥è¿”å›åŸå§‹ä¸²å£å·
         }
     }
-    // ·ñÔòÖ±½Ó·µ»ØÔ­Ê¼´®¿ÚºÅ
+    // å¦åˆ™ç›´æ¥è¿”å›åŸå§‹ä¸²å£å·
     return comPort;
 }
 
@@ -187,10 +187,10 @@ int main()
     COMMTIMEOUTS timeouts = {0};
     DWORD bytesTransferred;
     char data[] = "Hello, Serial Port!";
-    unsigned char buffer[256]; // ¼ÙÉè»º³åÇø´óĞ¡Îª 256
+    unsigned char buffer[256]; // å‡è®¾ç¼“å†²åŒºå¤§å°ä¸º 256
 
     std::string com_port = "COM11";
-    com_port = adjustComPort(com_port); // µ÷Õû´®¿ÚºÅ¸ñÊ½£¬µ±´®¿ÚºÅ´óÓÚ 9 Ê±£¬Ê¹ÓÃÌØÊâÂ·¾¶¸ñÊ½ "\\.\COMxx"
+    com_port = adjustComPort(com_port); // è°ƒæ•´ä¸²å£å·æ ¼å¼ï¼Œå½“ä¸²å£å·å¤§äº 9 æ—¶ï¼Œä½¿ç”¨ç‰¹æ®Šè·¯å¾„æ ¼å¼ "\\.\COMxx"
 
     serialPort = CreateFile(com_port.c_str(), GENERIC_READ | GENERIC_WRITE, 0, nullptr,
                             OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
@@ -240,11 +240,11 @@ int main()
 
     std::cout << "Data written to serial port" << std::endl;
 
-    // ¶ÁÈ¡Êı¾İ
+    // è¯»å–æ•°æ®
     int bytesRead = readFromSerialPort(serialPort, buffer, sizeof(buffer));
     if (bytesRead > 0) {
         std::cout << "Read " << bytesRead << " bytes from serial port" << std::endl;
-        // ´¦Àí¶ÁÈ¡µ½µÄÊı¾İ
+        // å¤„ç†è¯»å–åˆ°çš„æ•°æ®
         std::cout << "Data received: " << buffer << std::endl;
     } else {
         std::cerr << "Failed to read from serial port" << std::endl;

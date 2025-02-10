@@ -7,3 +7,5 @@ add_executable(${this_target_name}
 )
 
 include_directories()
+
+message(STATUS "Building ${this_target_name} target")

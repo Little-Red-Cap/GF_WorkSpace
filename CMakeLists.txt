@@ -26,6 +26,13 @@ include(Script/CMake/compilers.cmake)
 set(PROJECT_NAME GF_WorkSpace)
 project(${PROJECT_NAME} LANGUAGES C CXX ASM)
 
+if(NOT CMAKE_BUILD_TYPE)
+#    set(CMAKE_BUILD_TYPE Debug)
+#    set(CMAKE_BUILD_TYPE Release)
+#    set(CMAKE_BUILD_TYPE MinSizeRel)
+#    set(CMAKE_BUILD_TYPE RelWithDebInfo)
+    message(STATUS "Setting build type to 'Debug' as none was specified.")
+endif()
 
 print_compiler_info()
 print_language_standard_info()
