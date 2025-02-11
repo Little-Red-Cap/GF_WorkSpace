@@ -1,0 +1,16 @@
+
+
+download lvgl form https://github.com/lvgl/lvgl/releases/
+copy lv_conf_template.h as lv_conf.h to your project anywhere in your project folder
+
+add this line to your CMakeLists.txt file:
+set(LV_CONF_PATH "${PROJECT_SOURCE_DIR}/lv_conf.h")
+it will tell lvgl to use your lv_conf.h file for configuration.
+
+
+
+download lv_drivers from https://github.com/lvgl/lv_drivers/releases/
+copy lv_drivers.pc.in to folder your project./lv_drivers.pc.in
+copy lv_drv_conf_template.h as lv_drv_conf.h to folder your project./lv_drv_conf.h
+
+

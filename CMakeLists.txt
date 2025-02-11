@@ -1,6 +1,6 @@
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_VERSION 1)
-cmake_minimum_required(VERSION 3.28)
+cmake_minimum_required(VERSION 3.30)
 
 set(GF_LIB_NAME gf)
 add_library(${GF_LIB_NAME} INTERFACE)
@@ -20,7 +20,7 @@ set(CMAKE_CXX_STANDARD 20)
 # specify cross-compilers and tools
 #set(platform "arm-none-eabi")
 set(platform "clang")
-include(Script/CMake/compilers.cmake)
+include(Scripts/CMake/compilers.cmake)
 
 # project settings
 set(PROJECT_NAME GF_WorkSpace)
@@ -40,7 +40,7 @@ print_language_standard_info()
 
 add_subdirectory(apps)
 add_subdirectory(Modules)
-add_subdirectory(Script/CMake)
+add_subdirectory(Scripts/CMake)
 add_subdirectory(ThirdPart)
 
 message("-- Build Type: ${CMAKE_BUILD_TYPE}")

@@ -1,0 +1,8 @@
+Follow the Styling guide
+Prefer enums instead of macros. If inevitable to use defines export them with LV_EXPORT_CONST_INT(defined_value) right after the define.
+In function arguments prefer type name[] declaration for array parameters instead of type * name
+Use typed pointers instead of void * pointers
+Functions and structs which are not part of the public API must begin with underscore in order to mark them as "private".
+Arguments must be named in H files too.
+Use const whenever possible to avoid unintended modifications of objects.
+Use static inline functions instead of macros whenever possible.
